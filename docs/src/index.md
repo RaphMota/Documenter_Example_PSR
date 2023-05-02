@@ -1,6 +1,6 @@
 # Documenter_Example_PSR.jl Documentation
 
-![header]("C:\Users\raphael.mota\Pictures\PSR.jpg")
+![header]("assets\PSR.png")
 
 ```@docs
 func(x)
