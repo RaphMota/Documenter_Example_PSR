@@ -1,6 +1,6 @@
 # Ploting functions
 
-We´re going to plot the func function, whose equation is:
+Vamos plotar a função func, cuja equação é:
 
 ```math
 func(x) = 2 x + 1
