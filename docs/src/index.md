@@ -1,8 +1,8 @@
-# Documentação do Documenter_Example_PSR.jl 
+# Documenter_Example_PSR.jl Documentation
 
 ![header](./assets/PSR.png)
 
-Uma biblioteca de **teste** para entender como Documenter funciona.
+A **test** library to understand how Documenter works.
 
 ```@docs
 func(x)
