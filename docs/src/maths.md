@@ -7,7 +7,7 @@ func(x) = 2 x + 1
 ```
 
 ```@eval
-using PyPlot
+using PyPlot, Documenter_Example_PSR
 
 x=range(0,20, length=40)
 y = [func(x)]
