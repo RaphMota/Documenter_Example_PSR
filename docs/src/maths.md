@@ -7,10 +7,10 @@ func(x) = 2 x + 1
 ```
 
 ```@eval
-using PyPlot, Documenter_Example_PSR
+using PyPlot
 
 x=range(0,20, length=40)
-y = [func(x)]
+y = [Documenter_Example_PSR.func(x)]
 
 label = ["func(x)"]
 
