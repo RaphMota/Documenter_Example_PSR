@@ -2,3 +2,9 @@ name = "Documenter_Example_PSR"
 uuid = "4ac9b7cc-28c3-4491-abad-9451cd97f97a"
 authors = ["RaphMota <raphael.mota@student-cs.fr>"]
 version = "0.1.0"
+
+[deps]
+Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
+
+[compat]
+Documenter = "0.27"
