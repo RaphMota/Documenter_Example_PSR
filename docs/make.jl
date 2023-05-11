@@ -11,4 +11,4 @@ PAGES = [
 
 makedocs(sitename="Documenter_Example_PSR.jl")
 
-deploydocs(repo = "github.com/RaphMota/Documenter_Example_PSR.git")
+deploydocs(repo = "github.com/RaphMota/Documenter_Example_PSR")
