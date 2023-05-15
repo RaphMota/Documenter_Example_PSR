@@ -18,10 +18,10 @@ jobs:
 
       # https://github.com/marketplace/actions/github-pages-action
       - name: Deploy 🚀
-        uses: RaphMota/Documenter_Example_PSR@v1.1
+        uses: RaphMota/Documenter_Example_PSR@v1.1-br
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           # deploy the current public folder
           # to <base url>/x.y.z version subfolder
           publish_dir: ./build
-          destination_dir: 1.1.0
+          destination_dir: 1.1.0-br

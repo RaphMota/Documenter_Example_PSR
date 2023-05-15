@@ -2,7 +2,7 @@
 
 ![header](./assets/PSR.png)
 
-A **test** library to understand how Documenter works.
+Uma biblioteca de **teste** para entender como o Documenter funciona.
 
 ```@docs
 func(x)
