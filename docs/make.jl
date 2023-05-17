@@ -1,14 +1,26 @@
-using Documenter, Documenter_Example_PSR
-
-About = "Introduction" => "index.md"
-
-Equations= "maths.md"
+import Documenter
+# using Documenter_Example_PSR
 
 PAGES = [
-    About,
-    Equations
+    "Introduction" => "index.md",
+    "maths.md",
     ]
 
-makedocs(sitename="Documenter_Example_PSR.jl")
+Documenter.makedocs(
+    sitename = "Example PSR",
+    format = Documenter.HTML(;
+        mathengine = Documenter.MathJax2(),
+        collapselevel = 1,
+        # assets = ["assets/extra_styles.css"],
+        footer = "Powered by [PSR](https://www.psr-inc.com/en/)",
+        # analytics = "",
+        sidebar_sitename = true,
+        description = "PSR docs experiments",
+        warn_outdated = true,
+    ),
+)
 
-deploydocs(repo = "github.com/RaphMota/Documenter_Example_PSR")
+Documenter.deploydocs(
+    repo = "github.com/RaphMota/Documenter_Example_PSR",
+    push_preview = true,    
+)
