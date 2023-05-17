@@ -15,7 +15,7 @@ Documenter.makedocs(
         footer = "Powered by [PSR](https://www.psr-inc.com/en/)",
         # analytics = "",
         sidebar_sitename = true,
-        description = "PSR docs experiments",
+        # description = "PSR docs experiments",
         warn_outdated = true,
     ),
 )
