@@ -1,17 +1,16 @@
 import Documenter
-# using Documenter_Example_PSR
 
 include("deploy.jl")
 
-VER = "17.2.3" # maybe get the version from a branch name?
+VER = "17.2.3"
 
 for lang in ["en", "es"]
-    PAGES = [
-        "Introduction" => joinpath(lang, "index.md"),
-        joinpath(lang, "maths.md"),
-        ]
-
     Documenter.makedocs(
+        pages = [
+            "Introduction" => "index.md",
+            "maths.md",
+        ],
+        source = joinpath("src", lang),
         sitename = "Example PSR " * lang,
         build   = "v" * VER * "-" * lang,
         format = Documenter.HTML(;
@@ -25,7 +24,6 @@ for lang in ["en", "es"]
             warn_outdated = true,
         ),
     )
-
 end
 
 psr_deploy_docs()
