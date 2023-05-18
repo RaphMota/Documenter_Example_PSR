@@ -1,8 +1,9 @@
 import Documenter
 # using Documenter_Example_PSR
 
+include("deploy.jl")
 
-VER = "17.2.3"
+VER = "17.2.3" # maybe get the version from a branch name?
 
 for lang in ["en", "es"]
     PAGES = [
@@ -26,13 +27,9 @@ for lang in ["en", "es"]
     )
 
 end
-# Documenter.deploydocs(
-#     repo = "github.com/RaphMota/Documenter_Example_PSR",
-#     push_preview = true,    
-# )
 
-# TODO:
-
+psr_deploy_docs()
+# TODO in psr_deploy_docs:
 # 1 - Git clone this REPO but in branch gh-pages
 # If: it is a commit in master: 
 # 2 - Move the 3 folders to the root dir of the cloned repo (might need to delete the previous ones with same name)
