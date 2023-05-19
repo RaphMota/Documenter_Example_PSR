@@ -1,0 +1,1 @@
+var DOCUMENTER_CURRENT_VERSION = "v17.2.3-en";
