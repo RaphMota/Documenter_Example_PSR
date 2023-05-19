@@ -3,8 +3,9 @@ import Documenter
 include("deploy.jl")
 
 VER = "17.2.3"
+langs = ["en", "es"]
 
-for lang in ["en", "es"]
+for lang in langs
     Documenter.makedocs(
         pages = [
             "Introduction" => "index.md",
@@ -26,7 +27,15 @@ for lang in ["en", "es"]
     )
 end
 
-psr_deploy_docs()
+# Update the versions.js file
+
+for lang in langs
+    deploydocs(
+        repo = "github.com/RaphMota/Documenter_Example_PSR.git",
+        target = "v" * VER * "-" * lang,
+        forcepush = false
+    )
+end
 # TODO in psr_deploy_docs:
 # 1 - Git clone this REPO but in branch gh-pages
 # If: it is a commit in master: 
