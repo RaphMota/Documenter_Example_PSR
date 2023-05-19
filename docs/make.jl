@@ -30,7 +30,7 @@ end
 # Update the versions.js file
 
 for lang in langs
-    deploydocs(
+    Documenter.deploydocs(
         repo = "github.com/RaphMota/Documenter_Example_PSR.git",
         target = "v" * VER * "-" * lang,
         forcepush = false
