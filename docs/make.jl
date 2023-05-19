@@ -22,20 +22,23 @@ for lang in langs
             # analytics = "",
             sidebar_sitename = true,
             # description = "PSR docs experiments",
-            warn_outdated = true,
+            warn_outdated = false,
         ),
     )
+    open(joinpath(@__DIR__, "v" * VER * "-" * lang, "siteinfo.js"), "w") do io
+        println(io, "var DOCUMENTER_CURRENT_VERSION = \"v" * VER * "-" * lang * "\";")
+    end
 end
 
 # Update the versions.js file
 
-for lang in langs
-    Documenter.deploydocs(
-        repo = "github.com/RaphMota/Documenter_Example_PSR.git",
-        target = "v" * VER * "-" * lang,
-        forcepush = false
-    )
-end
+# for lang in langs
+#     Documenter.deploydocs(
+#         repo = "github.com/RaphMota/Documenter_Example_PSR.git",
+#         target = "v" * VER * "-" * lang,
+#         forcepush = false
+#     )
+# end
 # TODO in psr_deploy_docs:
 # 1 - Git clone this REPO but in branch gh-pages
 # If: it is a commit in master: 
