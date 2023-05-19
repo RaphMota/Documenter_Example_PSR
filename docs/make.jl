@@ -2,8 +2,9 @@ import Documenter
 
 include("deploy.jl")
 
-VER = "17.2.3"
-langs = ["en", "es"]
+VER = "17.1.4"
+langs = ["en", "es", "br"]
+repo_url = "https://github.com/RaphMota/Documenter_Example_PSR"
 
 for lang in langs
     Documenter.makedocs(
@@ -21,7 +22,7 @@ for lang in langs
             footer = "Powered by [PSR](https://www.psr-inc.com/en/)",
             # analytics = "",
             sidebar_sitename = true,
-            # description = "PSR docs experiments",
+            description = "PSR docs experiments",
             warn_outdated = false,
         ),
     )
@@ -30,15 +31,9 @@ for lang in langs
     end
 end
 
-# Update the versions.js file
+psr_deploy_docs(repo_url, VER, langs)
 
-# for lang in langs
-#     Documenter.deploydocs(
-#         repo = "github.com/RaphMota/Documenter_Example_PSR.git",
-#         target = "v" * VER * "-" * lang,
-#         forcepush = false
-#     )
-# end
+
 # TODO in psr_deploy_docs:
 # 1 - Git clone this REPO but in branch gh-pages
 # If: it is a commit in master: 
@@ -48,3 +43,8 @@ end
 # ElseIf: it is a PR
 # 2 - Move the 3 folders to the preview/PR$(PRNUM) dir of the cloned repo
 # 3 - Push the updated branch of gh-pages
+
+# add juliaup (winget install julia -s msstore)
+# open julia
+# ] dev https://github.com/psrenergy-docs/Documenter.jl
+# ] dev https://github.com/RaphMota/Documenter_Example_PSR

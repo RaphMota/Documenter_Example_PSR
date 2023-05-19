@@ -1,4 +1,4 @@
-# LaTeX function (ES)
+# LaTeX function (BR)
 
 Here is an equation
 

@@ -1,4 +1,4 @@
-# Documenter Example PSR (ES)
+# Documenter Example PSR (BR)
 
 
 Here is a figure:
