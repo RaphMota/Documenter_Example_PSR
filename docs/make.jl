@@ -31,7 +31,7 @@ for lang in langs
     end
 end
 
-psr_deploy_docs(repo_url, VER, langs)
+# psr_deploy_docs(repo_url, VER, langs)
 
 
 # TODO in psr_deploy_docs:
